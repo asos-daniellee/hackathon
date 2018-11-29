@@ -12,12 +12,13 @@
   font-weight: 700;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   background-color: #000;
   margin: 0;
   padding: 0;
-  color: #FFF;
+  color: #fff;
   font-family: futura-pt, sans-serif;
 }
 
@@ -42,4 +43,13 @@ html, body {
 
 .competencies {
   width: 764px;
+}
+
+.subCompetencies {
+	width: 288px;
+	height: 170px;
+	border: 1px solid white;
+	border-radius: 8px;
+	margin: 6px;
+	padding: 20px;
 }
