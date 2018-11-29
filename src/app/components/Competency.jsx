@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { generateKeyPairSync } from "crypto";
 
 export default class Competency extends React.Component {
@@ -35,8 +36,13 @@ export default class Competency extends React.Component {
       <div className="subCompetencies-main">
         <h1 className="subCompetencies-title">{this.props.title}</h1>
         {this.getGradesAndCompetencies()}
-        <button>Add Your Work</button>
-        <button>View Skill Cards</button>
+
+        <Link to="/add">
+          <button>Add Your Work</button>
+        </Link>
+        <Link to="/view">
+          <button>View Skill Cards</button>
+        </Link>
       </div>
     );
   }
