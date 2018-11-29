@@ -28,7 +28,7 @@ module.exports = () => {
       new webpack.EnvironmentPlugin({
         NODE_ENV: "development"
       }),
-      new CopyWebpackPlugin([ { from: "src/index.html", to: "public/" } ])
+      new CopyWebpackPlugin([ { from: "src/index.html", to: "public/" }, { from: "src/styles.css", to: "public/" } ])
     ]
   };
 };
