@@ -13,18 +13,22 @@ export default class App extends Component {
         email: "joe.bloggs@asos.com",
         level: "Implement",
         lineManager: "Jane Smith",
-        career: Data.careers
+        career: "QA"
       },
-      competencies: Data.careers
     };
   }
 
+  getCompetencies() {
+    return data.careers.find(({role}) => this.state.userInfo.career);
+  }
+
   render() {
+
     return (
       <div>
         <UserInfo {...this.state.userInfo} />
 
-        <Bar careers={this.state.competencies} />
+        <Bar competencies={this.getCompetencies()} />
       </div>
     );
   }
