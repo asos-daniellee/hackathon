@@ -6,18 +6,19 @@ export default class Bar extends React.Component {
     this.state = {};
   }
 
+  getClassName(id) {
+    return this.props.selectedTopLevelCompetency && this.props.selectedTopLevelCompetency.id === id ? "selected-competency" : "";
+  }
+
   generateRating() {
-    return this.props.topLevelCompetencies.map(({ id, name }) => (
-      <div>
-        <button key={id} id={id} onClick={this.props.selectTopLevelCompetency}>
-          {name}
-        </button>
-        {/* <p>{name}</p> */}
-      </div>
+    return this.props.topLevelCompetencies.map(({id, name}) => (
+      <button key={id} id={id} onClick={this.props.selectTopLevelCompetency} className={this.getClassName(id)}>
+        {name}
+      </button>
     ));
   }
 
   render() {
-    return <div>{this.generateRating()}</div>;
+    return <div className="bar">{this.generateRating()}</div>;
   }
 }

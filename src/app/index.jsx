@@ -16,7 +16,7 @@ export default class App extends Component {
         level: "Implement",
         lineManager: "Jane Smith",
         career: "QA"
-      },
+      }
     };
   }
 
@@ -26,7 +26,7 @@ export default class App extends Component {
 
   getSelectedTopLevelCompetency(topLevelCompetencies) {
     return topLevelCompetencies.find(({ id }) => id === this.state.selected);
-  };
+  }
 
   selectTopLevelCompetency = event => {
     this.setState({ selected: event.target.id });
@@ -35,18 +35,34 @@ export default class App extends Component {
   render() {
     const career = this.getCareer();
     const topLevelCompetencies = career.topLevelCompetencies;
-    const selectedTopLevelCompetency = this.getSelectedTopLevelCompetency(topLevelCompetencies);
-    const subCompetencies = selectedTopLevelCompetency ? selectedTopLevelCompetency.subCompentencies : undefined;
+    const selectedTopLevelCompetency = this.getSelectedTopLevelCompetency(
+      topLevelCompetencies
+    );
+    const subCompetencies = selectedTopLevelCompetency
+      ? selectedTopLevelCompetency.subCompentencies
+      : undefined;
     const competenciesGrades = career.grades;
     const globalCompetencies = data.competencies;
     console.log("competenciesGrades", competenciesGrades);
 
-    return <div className="app">
-      <UserInfo {...this.state.userInfo }/>
-      <div className="competencies">
-        <Bar topLevelCompetencies={topLevelCompetencies} selectTopLevelCompetency={this.selectTopLevelCompetency} />
-        {subCompetencies && <SubCompetencies globalCompetencies={globalCompetencies} competenciesGrades={competenciesGrades} subCompetencies={subCompetencies} />}
+    return (
+      <div className="app">
+        <UserInfo {...this.state.userInfo} />
+        <div className="competencies">
+          <Bar
+            topLevelCompetencies={topLevelCompetencies}
+            selectTopLevelCompetency={this.selectTopLevelCompetency}
+            selectedTopLevelCompetency={selectedTopLevelCompetency}
+          />
+          {subCompetencies && (
+            <SubCompetencies
+              globalCompetencies={globalCompetencies}
+              competenciesGrades={competenciesGrades}
+              subCompetencies={subCompetencies}
+            />
+          )}
+        </div>
       </div>
-    </div>;
+    );
   }
 }
