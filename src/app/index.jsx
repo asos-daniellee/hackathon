@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Bar from "./components/Bar";
 import { UserInfo } from "./components/UserInfo";
-import { SubCompetencies } from "./components/SubCompetencies";
+import SubCompetencies from "./components/SubCompetencies";
 import data from "./data";
 
 export default class App extends Component {

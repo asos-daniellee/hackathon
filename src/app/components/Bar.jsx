@@ -7,8 +7,13 @@ export default class Bar extends React.Component {
   }
 
   generateRating() {
-    return this.props.topLevelCompetencies.map(({id, name}) => (
-      <button key={id} id={id} onClick={this.props.selectTopLevelCompetency}>{name}</button>
+    return this.props.topLevelCompetencies.map(({ id, name }) => (
+      <div>
+        <button key={id} id={id} onClick={this.props.selectTopLevelCompetency}>
+          {name}
+        </button>
+        {/* <p>{name}</p> */}
+      </div>
     ));
   }
 
