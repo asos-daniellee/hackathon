@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { UserInfo } from "./components/UserInfo";
+import data from "./data";
 
 export default class App extends Component {
   constructor(props) {
