@@ -19,7 +19,7 @@ export default class Competency extends React.Component {
       console.log("filteredCompetencies", filteredCompetencies);
 
       return (
-        <div>
+        <div className="subCompetencies-text">
           <p>{name}</p>
           <ol>
             {filteredCompetencies.map(competency => (
@@ -35,14 +35,16 @@ export default class Competency extends React.Component {
     return (
       <div className="subCompetencies-main">
         <h1 className="subCompetencies-title">{this.props.title}</h1>
+        <h3 className="subCompetencies-skills">SKILLS</h3>
         {this.getGradesAndCompetencies()}
-
+        <div className="button-container">
         <Link to="/add">
-          <button>Add Your Work</button>
+          <button className="button">Add Your Work</button>
         </Link>
         <Link to="/view">
-          <button>View Skill Cards</button>
+          <button className="button">View Skill Cards</button>
         </Link>
+        </div>
       </div>
     );
   }

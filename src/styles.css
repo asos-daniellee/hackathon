@@ -121,29 +121,42 @@ html, body {
   width: 764px;
 }
 
-.subCompetencies {
-	border: 1px solid black;
-	border-radius: 8px;
-	margin: auto;
-	padding: 10px;
-  width: 1050px;
-}
-
 .subCompetencies-title {
   background-color: #2d2d2d;
-  margin: 0;
-  padding: 0;
+  padding: 12px;
 }
 
 .subCompetencies-main{
-  background-color: darkgray;
-  border: 1px solid black;
-	border-radius: 8px;
+  background-color: #464646;
 	margin: auto;
-	padding: 10px;
-  width: 1050px;
   box-sizing: border-box;
-  width: 1180px;
+}
+
+.subCompetencies-text {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 12px;
+}
+
+.subCompetencies-skills{
+  padding: 12px;
+  border-bottom: 2px solid #626262;
+}
+
+.button{
+  font-family: futura-pt, sans-serif;
+  color: white;
+  border-width: 3px;
+  width: 200px;
+  height: 30px;
+  background-color: #464646;
+  outline: white;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.button-container{
+  width: 100%;
 }
 
 .bar {
