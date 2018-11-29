@@ -38,10 +38,12 @@ export default class App extends Component {
     const selectedTopLevelCompetency = this.getSelectedTopLevelCompetency(topLevelCompetencies);
     const subCompetencies = selectedTopLevelCompetency ? selectedTopLevelCompetency.subCompentencies : undefined;
 
-    return <div >
+    return <div className="app">
       <UserInfo {...this.state.userInfo }/>
-      <Bar topLevelCompetencies={topLevelCompetencies} selectTopLevelCompetency={this.selectTopLevelCompetency} />
-      {subCompetencies && <SubCompetencies subCompetencies={subCompetencies} />}
+      <div className="competencies">
+        <Bar topLevelCompetencies={topLevelCompetencies} selectTopLevelCompetency={this.selectTopLevelCompetency} />
+        {subCompetencies && <SubCompetencies subCompetencies={subCompetencies} />}
+      </div>
     </div>;
   }
 }
