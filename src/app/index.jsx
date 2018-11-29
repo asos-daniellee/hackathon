@@ -41,7 +41,11 @@ export default class App extends Component {
     return <div className="app">
       <UserInfo {...this.state.userInfo }/>
       <div className="competencies">
-        <Bar topLevelCompetencies={topLevelCompetencies} selectTopLevelCompetency={this.selectTopLevelCompetency} />
+        <Bar
+          topLevelCompetencies={topLevelCompetencies}
+          selectTopLevelCompetency={this.selectTopLevelCompetency}
+          selectedTopLevelCompetency={selectedTopLevelCompetency}
+        />
         {subCompetencies && <SubCompetencies subCompetencies={subCompetencies} />}
       </div>
     </div>;
