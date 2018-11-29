@@ -45,7 +45,13 @@ export default {
         },
         {
           id: "tc-4",
-          name: "Testing"
+          name: "Testing",
+          subCompentencies: [
+            {
+              id: "sc-7",
+              name: "Bugs"
+            }
+          ]
         },
         {
           id: "tc-5",
