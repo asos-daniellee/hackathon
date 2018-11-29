@@ -15,4 +15,7 @@ export const UserInfo = ({ name, jobTitle, email, level, lineManager }) =>
       <h2>LINE MANAGER</h2>
       <p>{lineManager}</p>
     </div>
+    <div>
+      <button className="feedback">ASK FOR FEEDBACK</button>
+    </div>
   </div>;
