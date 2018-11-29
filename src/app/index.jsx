@@ -29,7 +29,7 @@ export default class App extends Component {
   }
 
   selectTopLevelCompetency = event => {
-    this.setState({ selected: event.target.id });
+    this.setState({ selected: event.currentTarget.id });
   };
 
   render() {

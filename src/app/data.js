@@ -82,6 +82,51 @@ export default {
               tcId: "tc-1",
               scId: "sc-2",
               cid: "c-3"
+            },
+            {
+              tcId: "tc-1",
+              scId: "sc-2",
+              cid: "c-6"
+            },
+            {
+              tcId: "tc-1",
+              scId: "sc-2",
+              cid: "c-7"
+            },
+            {
+              tcId: "tc-1",
+              scId: "sc-2",
+              cid: "c-8"
+            },
+            {
+              tcId: "tc-1",
+              scId: "sc-2",
+              cid: "c-9"
+            },
+            {
+              tcId: "tc-1",
+              scId: "sc-3",
+              cid: "c-5"
+            },
+            {
+              tcId: "tc-1",
+              scId: "sc-3",
+              cid: "c-10"
+            },
+            {
+              tcId: "tc-1",
+              scId: "sc-4",
+              cid: "c-11"
+            },
+            {
+              tcId: "tc-1",
+              scId: "sc-5",
+              cid: "c-12"
+            },
+            {
+              tcId: "tc-1",
+              scId: "sc-6",
+              cid: "c-13"
             }
           ]
         },
@@ -116,6 +161,47 @@ export default {
     {
       cid: "c-4",
       description: "Understands the Apps' use of HTTP/HTTPS, the RESTful services the App consumes and how the App uses them"
+    },
+    {
+      cid: "c-5",
+      description: "Understands the differences between mocks and stubs and why you might use one or the other"
+    },
+    {
+      cid: "c-6",
+      description: "Identifying errors in the console log"
+    },
+    {
+      cid: "c-7",
+      description: "Identifying element selectors"
+    },
+    {
+      cid: "c-8",
+      description: "Identifying relevant requests in the network tab"
+    },
+    {
+      cid: "c-9",
+      description: "Interacting with the DOM when investigating issues"
+    },
+    {
+      cid: "c-10",
+      description: "Understands where they are used by the team"
+    },
+    {
+      cid: "c-11",
+      description: "Can describe the environments used by the application and what problem each solves"
+    },
+    {
+      cid: "c-12",
+      description: "Can describe the CI pipeline and the testing activities that occur at each step"
+    },
+    {
+      cid: "c-13",
+      description: "Demonstrates a clear understanding of Web technology."
     }
   ]
 }
+
+
+
+
+

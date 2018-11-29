@@ -1,4 +1,5 @@
 import React from "react";
+import {ProgressCircle} from "./ProgressCircle";
 
 export default class Bar extends React.Component {
   constructor(props) {
@@ -11,11 +12,12 @@ export default class Bar extends React.Component {
   }
 
   generateRating() {
-    return this.props.topLevelCompetencies.map(({id, name}) => (
-      <button key={id} id={id} onClick={this.props.selectTopLevelCompetency} className={this.getClassName(id)}>
-        {name}
+    return this.props.topLevelCompetencies.map(({id, name}) => {
+      return <button key={id} id={id} onClick={this.props.selectTopLevelCompetency} className={this.getClassName(id)}>
+        <p>{name}</p>
+        <ProgressCircle progress={66} />
       </button>
-    ));
+    });
   }
 
   render() {
