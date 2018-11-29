@@ -6,11 +6,14 @@ export default class Bar extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {}
-
   generateRating() {
-    const scores = ["score", "score"];
-    return scores.map((e, index) => <button key={`score-${index}`}></button>);
+    const topLevelCompetencies = this.props.competencies.map(
+      obj => obj
+    );
+
+    return topLevelCompetencies.map((competency, index) => (
+      <button key={`score-${index}`}>{competency.name}</button>
+    ));
   }
 
   render() {
