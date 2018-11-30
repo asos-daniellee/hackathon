@@ -16,7 +16,7 @@ export default class Competency extends React.Component {
       );
 
       return (
-        <div className="subCompetencies-text">
+        <div key={`grade-${name}`} className="subCompetencies-text">
           <p>{name}</p>
           {this.props.level != name ?
           <ol className="greyout">
@@ -26,7 +26,7 @@ export default class Competency extends React.Component {
           </ol> :
           <ol>
           {filteredCompetencies.map(competency => (
-            <li>{competency.description}</li>
+            <li key={`text-${competency.cid}`}>{competency.description}</li>
           ))}
         </ol>
           }
@@ -41,11 +41,11 @@ export default class Competency extends React.Component {
         <h1 className="subCompetencies-title">{this.props.title}</h1>
         <h3 className="subCompetencies-skills">SKILLS</h3>
         {this.getGradesAndCompetencies()}
-        
-        
+
+
         <div>
         <Link to="/add">
-          <button className="button-add">Add Your Work</button>
+          <button data-id={this.props.scId} onClick={this.props.selectSubLevelCompetency} className="button-add">Add Your Work</button>
         </Link>
         <Link to="/view">
           <button className="button-view">View Skill Cards</button>
