@@ -5,7 +5,7 @@ export default class AddWork extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedGrade: "",
+            selectedGrade: "Associate",
             checkedValues: {}
         }
     }
@@ -66,6 +66,8 @@ export default class AddWork extends React.Component {
       this.props.updateCompetencyEvidence(updatedCompetencies);
     };
 
+
+    
     render() {
         const gradeCompetencies = this.getGradeCompetencies();
 

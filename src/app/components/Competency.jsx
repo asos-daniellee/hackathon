@@ -5,6 +5,7 @@ import { generateKeyPairSync } from "crypto";
 export default class Competency extends React.Component {
   getGradesAndCompetencies() {
     const grades = this.props.grades;
+    console.log("level", this.props.level);
 
     return grades.map(({ name, competencies }) => {
       const cids = competencies
@@ -17,11 +18,18 @@ export default class Competency extends React.Component {
       return (
         <div key={`grade-${name}`} className="subCompetencies-text">
           <p>{name}</p>
-          <ol>
+          {this.props.level != name ?
+          <ol className="greyout">
             {filteredCompetencies.map(competency => (
-              <li key={`text-${competency.cid}`}>{competency.description}</li>
+              <li>{competency.description}</li>
             ))}
-          </ol>
+          </ol> :
+          <ol>
+          {filteredCompetencies.map(competency => (
+            <li key={`text-${competency.cid}`}>{competency.description}</li>
+          ))}
+        </ol>
+          }
         </div>
       );
     });
@@ -33,12 +41,14 @@ export default class Competency extends React.Component {
         <h1 className="subCompetencies-title">{this.props.title}</h1>
         <h3 className="subCompetencies-skills">SKILLS</h3>
         {this.getGradesAndCompetencies()}
-        <div className="button-container">
+
+
+        <div>
         <Link to="/add">
-          <button data-id={this.props.scId} onClick={this.props.selectSubLevelCompetency} className="button">Add Your Work</button>
+          <button data-id={this.props.scId} onClick={this.props.selectSubLevelCompetency} className="button-add">Add Your Work</button>
         </Link>
         <Link to="/view">
-          <button className="button">View Skill Cards</button>
+          <button className="button-view">View Skill Cards</button>
         </Link>
         </div>
       </div>

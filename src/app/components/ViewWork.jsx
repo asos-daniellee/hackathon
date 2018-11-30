@@ -4,7 +4,11 @@ export default class ViewWork extends React.Component {
 
     render() {
         return (
-            <div>View Work</div>
+            <div>
+
+            <img src="/Page3.svg" />
+
+            </div>
         )
     }
 }

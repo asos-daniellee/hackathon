@@ -13,6 +13,7 @@ export default class SubCompetencies extends React.Component {
         grades={grades}
         title={name}
         key={id}
+        level={this.props.level}
         selectSubLevelCompetency={this.props.selectSubLevelCompetency}
       />
     ));

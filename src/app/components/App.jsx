@@ -16,7 +16,7 @@ export default class App extends Component {
         name: "Joe Bloggs",
         jobTitle: "Associate", //Data.careers.role
         email: "joe.bloggs@asos.com",
-        level: "Implement",
+        level: "Associate",
         lineManager: "Jane Smith",
         career: "QA"
       },
@@ -49,6 +49,7 @@ export default class App extends Component {
     const returnSubCompetencies = () => {
       return subCompetencies && (
         <SubCompetencies
+          level={this.state.userInfo.level}
           globalCompetencies={globalCompetencies}
           competenciesGrades={competenciesGrades}
           subCompetencies={subCompetencies}
