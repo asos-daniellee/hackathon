@@ -4,7 +4,6 @@ import { generateKeyPairSync } from "crypto";
 
 export default class Competency extends React.Component {
   getGradesAndCompetencies() {
-    console.log("grades:", this.props.grades);
     const grades = this.props.grades;
 
     return grades.map(({ name, competencies }) => {
@@ -14,9 +13,6 @@ export default class Competency extends React.Component {
       const filteredCompetencies = this.props.globalCompetencies.filter(
         ({ cid }) => cids.includes(cid)
       );
-
-      console.log("cids", cids);
-      console.log("filteredCompetencies", filteredCompetencies);
 
       return (
         <div className="subCompetencies-text">
