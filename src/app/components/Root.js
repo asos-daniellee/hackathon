@@ -1,7 +1,6 @@
 import React from "react";
 import { Switch, Route, BrowserRouter, HashRouter} from "react-router-dom";
 import App from "../index.jsx";
-import UserInfo from "./UserInfo";
 import AddWork from "./AddWork";
 import ViewWork from "./ViewWork";
 
