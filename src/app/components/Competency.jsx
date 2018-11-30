@@ -5,6 +5,7 @@ import { generateKeyPairSync } from "crypto";
 export default class Competency extends React.Component {
   getGradesAndCompetencies() {
     const grades = this.props.grades;
+    console.log("level", this.props.level);
 
     return grades.map(({ name, competencies }) => {
       const cids = competencies
@@ -17,11 +18,18 @@ export default class Competency extends React.Component {
       return (
         <div className="subCompetencies-text">
           <p>{name}</p>
-          <ol>
+          {this.props.level != name ?
+          <ol className="greyout">
             {filteredCompetencies.map(competency => (
               <li>{competency.description}</li>
             ))}
-          </ol>
+          </ol> :
+          <ol>
+          {filteredCompetencies.map(competency => (
+            <li>{competency.description}</li>
+          ))}
+        </ol>
+          }
         </div>
       );
     });
@@ -33,12 +41,14 @@ export default class Competency extends React.Component {
         <h1 className="subCompetencies-title">{this.props.title}</h1>
         <h3 className="subCompetencies-skills">SKILLS</h3>
         {this.getGradesAndCompetencies()}
+        
+        
         <div className="button-container">
         <Link to="/add">
-          <button className="button">Add Your Work</button>
+          <button className="button-add">Add Your Work</button>
         </Link>
         <Link to="/view">
-          <button className="button">View Skill Cards</button>
+          <button className="button-view">View Skill Cards</button>
         </Link>
         </div>
       </div>

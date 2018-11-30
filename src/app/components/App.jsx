@@ -38,6 +38,7 @@ export default class App extends Component {
     if (this.props.location.pathname === "/") {
       return subCompetencies && (
         <SubCompetencies
+          level={this.state.userInfo.level} 
           globalCompetencies={globalCompetencies}
           competenciesGrades={competenciesGrades}
           subCompetencies={subCompetencies}

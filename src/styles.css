@@ -14,12 +14,13 @@
   font-stretch: normal;
 }
 
-html, body {
+html,
+body {
   background-color: #000;
   height: 100%;
   margin: 0;
   padding: 0;
-  color: #FFF;
+  color: #fff;
   font-family: futura-pt, sans-serif;
 }
 
@@ -35,7 +36,6 @@ html, body {
   margin: 0 auto;
   display: flex;
   align-items: stretch;
- 
 }
 
 .user-info {
@@ -97,18 +97,19 @@ html, body {
   width: 120px;
 }
 
-.user-info .personal h1, .user-info .personal p {
+.user-info .personal h1,
+.user-info .personal p {
   margin: 1px;
 }
 
-.links{
+.links {
   padding-top: 5px;
 }
 
 .feedback {
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   background-color: #191818;
-  color: #FFF;
+  color: #fff;
   border-radius: 0;
   height: 44px;
   width: 216px;
@@ -128,14 +129,16 @@ html, body {
 }
 
 .subCompetencies-title {
-  background-color: #2d2d2d;
+  background-color: #191818;
   padding: 12px;
 }
 
-.subCompetencies-main{
-  background-color: #464646;
-	margin: auto;
+.subCompetencies-main {
+  margin: auto;
   box-sizing: border-box;
+  width: 700px;
+  height: auto;
+  background-color: #2d2d2d;
 }
 
 .subCompetencies-text {
@@ -144,15 +147,45 @@ html, body {
   margin: 12px;
 }
 
-.subCompetencies-skills{
+.subCompetencies-skills {
   padding: 12px;
   border-bottom: 2px solid #626262;
 }
 
-.button{
-  border: 2px solid #FFF;
+.greyout {
+  color: grey;
+  width: 583px;
+  height: 44px;
+  font-family: FuturaPT-Reg;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: 0.4px;
+}
+
+.button-add {
+  outline-color: #00ffc2;
+  background-color: #00ffc2;
+  border-radius: 0;
+  height: 44px;
+  width: 216px;
+  font-size: 16px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  color: black;
+  line-height: 1.13;
+  letter-spacing: 0.6px;
+  text-align: center;
+  margin: 40px 0 50px;
+  cursor: pointer;
+}
+
+.button-add:hover {
+  outline-color: #00ffc2;
   background-color: #464646;
-  color: #FFF;
   border-radius: 0;
   height: 44px;
   width: 216px;
@@ -167,7 +200,43 @@ html, body {
   cursor: pointer;
 }
 
-.button-container{
+.button-view {
+  outline-color: #00ffc2;
+  background-color: #464646;
+  border-radius: 0;
+  height: 44px;
+  width: 216px;
+  font-size: 16px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  color: white;
+  line-height: 1.13;
+  letter-spacing: 0.6px;
+  text-align: center;
+  margin: 40px 0 50px;
+  cursor: pointer;
+}
+
+.button-view:hover {
+  outline-color: #00ffc2;
+  background-color: #00ffc2;
+  border-radius: 0;
+  height: 44px;
+  width: 216px;
+  font-size: 16px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.13;
+  letter-spacing: 0.6px;
+  text-align: center;
+  margin: 40px 0 50px;
+  cursor: pointer;
+}
+
+
+.button-container {
   width: 100%;
 }
 
@@ -189,7 +258,7 @@ html, body {
   min-width: 145px;
   border: none;
   border-bottom: 5px solid transparent;
-  color: #FFF;
+  color: #fff;
   font-family: futura-pt, sans-serif;
   font-size: 14px;
   line-height: 1.43;
