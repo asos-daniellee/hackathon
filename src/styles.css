@@ -103,7 +103,12 @@ body {
 }
 
 .links {
-  padding-top: 5px;
+  margin: 20px 0 2px;
+  color: white;
+}
+
+.useful{
+  margin-bottom: 10px;
 }
 
 .feedback {
@@ -143,7 +148,6 @@ body {
   box-sizing: border-box;
   width: 700px;
   background-color: #2d2d2d;
-  font-family: normal;
 }
 
 .subCompetencies-text {

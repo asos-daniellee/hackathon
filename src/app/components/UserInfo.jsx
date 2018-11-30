@@ -20,17 +20,18 @@ export const UserInfo = ({ name, jobTitle, email, level, lineManager }) =>
       <button className="feedback">ASK FOR FEEDBACK</button>
     </div>
 
-    <div>
-      <h2>USEFUL LINKS</h2>
-      <a href='https://asos.academy' target="_blank" >ASOS Academy</a>
+    <div >
+      <h2 className="useful">USEFUL LINKS</h2>
+      <p className="links"><a href='https://asos.academy' target="_blank" >ASOS Academy</a></p>
       <br/>
-      <a href='https://wd3.myworkday.com/asos/d/home.htmld' target="_blank">Workday</a>
+      <p className="links"><a  href='https://wd3.myworkday.com/asos/d/home.htmld' target="_blank">Workday</a></p>
       <br/>
-      <a href='https://www.pluralsight.com/' target="_blank">Pluralsight</a>
+      <p><a href='https://www.pluralsight.com/' target="_blank">Pluralsight</a></p>
       <br/>
-      <a href='https://slack.com/' target="_blank">Slack</a>
+      <p><a href='https://slack.com/' target="_blank">Slack</a></p>
       <br/>
-      <a href='https://asos.interactgo.com/Interact/Pages/Content/Document.aspx?id=3547' target="_blank">Privacy Policy</a>
+      <p><a href='https://asos.interactgo.com/Interact/Pages/Content/Document.aspx?id=3547' target="_blank">Privacy Policy</a></p>
+      <br/>
       <p>Version 1.0</p>
     </div>
   </div>;
