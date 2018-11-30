@@ -11,12 +11,19 @@ export class ProgressCircle extends Component {
   }
 
   componentDidMount() {
-    console.log(this.progressCircle);
     const radius = this.progressCircle.r.baseVal.value;
     this.circumference = radius * 2 * Math.PI;
     const offset = this.circumference - this.props.progress / 100 * this.circumference;
     this.progressCircle.style.strokeDasharray = `${this.circumference} ${this.circumference}`;
-    console.log(offset);
+    this.progressCircle.style.strokeDashoffset = -offset;
+    this.progressCircle.style.stroke = this.getProgressColor();
+  }
+
+  componentDidUpdate() {
+    const radius = this.progressCircle.r.baseVal.value;
+    this.circumference = radius * 2 * Math.PI;
+    const offset = this.circumference - this.props.progress / 100 * this.circumference;
+    this.progressCircle.style.strokeDasharray = `${this.circumference} ${this.circumference}`;
     this.progressCircle.style.strokeDashoffset = -offset;
     this.progressCircle.style.stroke = this.getProgressColor();
   }

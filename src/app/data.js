@@ -8,7 +8,7 @@ export default {
         {
           id: "tc-1",
           name: "Technical",
-          subCompentencies: [
+          subCompetencies: [
             {
               id: "sc-1",
               name: "Architecture"
@@ -38,7 +38,7 @@ export default {
         {
           id: "tc-2",
           name: "Collaboration",
-          subCompentencies: [
+          subCompetencies: [
             {
               id: "sc-7",
               name: "Collaboration"
@@ -48,7 +48,7 @@ export default {
         {
           id: "tc-3",
           name: "Code and Auto Tests",
-          subCompentencies: [
+          subCompetencies: [
             {
               id: "sc-8",
               name: "Authoring"
@@ -66,7 +66,7 @@ export default {
         {
           id: "tc-4",
           name: "Testing",
-          subCompentencies: [
+          subCompetencies: [
             {
               id: "sc-11",
               name: "Bugs"
@@ -108,7 +108,7 @@ export default {
         {
           id: "tc-5",
           name: "Shipping and Monitoring",
-          subCompentencies: [
+          subCompetencies: [
             {
               id: "sc-20",
               name: "Shipping and Monitoring"
@@ -118,7 +118,7 @@ export default {
         {
           id: "tc-6",
           name: "Talent",
-          subCompentencies: [
+          subCompetencies: [
             {
               id: "sc-21",
               name: "Talent"
