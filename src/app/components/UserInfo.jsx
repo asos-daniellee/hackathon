@@ -24,12 +24,10 @@ export const UserInfo = ({ name, jobTitle, email, level, lineManager }) => (
 
     <div>
       <br/>
-    <img src="/Badges.svg" /> 
+    <img className="badges" src="/Badges.jpeg" /> 
     </div>
 
     <div>
-    <br/>
-    <br/>
       <h2 className="useful">USEFUL LINKS</h2>
       <br />
       <p>

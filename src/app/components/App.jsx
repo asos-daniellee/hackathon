@@ -66,6 +66,8 @@ export default class App extends Component {
     const globalCompetencies = data.competencies;
 
     return (
+      <div>
+      <img className="banner" src="/Banner.jpeg" />
       <div className="app">
         <UserInfo {...this.state.userInfo} />
         <div className="competencies">
@@ -76,6 +78,7 @@ export default class App extends Component {
           />
           {this.getPage({ globalCompetencies, competenciesGrades, subCompetencies })}
         </div>
+      </div>
       </div>
     );
   }

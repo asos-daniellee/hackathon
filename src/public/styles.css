@@ -175,7 +175,6 @@ body {
   color: grey;
   width: 583px;
   height: 44px;
-  font-family: FuturaPT-Reg;
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -321,4 +320,18 @@ body {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+
+.image{
+  width: 1180px;
+}
+
+.badges{
+  width: 270px;
+}
+
+.banner{
+  margin: 0 auto;
+  display: block;
+  width: 1440px;
 }

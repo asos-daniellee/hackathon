@@ -51,6 +51,8 @@ export default class Competency extends React.Component {
           <button className="button-view">View Skill Cards</button>
         </Link>
         </div>
+
+        <img src="/sideView.jpeg" />
       </div>
     );
   }
