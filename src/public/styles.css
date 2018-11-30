@@ -328,7 +328,7 @@ body {
 }
 
 .badges{
-  width: 270px;
+  width: 220px;
 }
 
 .banner{
@@ -369,6 +369,7 @@ body {
 
 .add-work .button-add {
   margin: 20px auto 0;
+  width: 210px;
 }
 
 .add-checkbox {
@@ -389,6 +390,8 @@ body {
 
 .center {
   margin: 0 auto;
+  width: 210px;
+  display: block;
 }
 
 .add-work-options li {

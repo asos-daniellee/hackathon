@@ -13,11 +13,11 @@ export default class App extends Component {
       selectedTopLevel: "",
       selectedSubLevel: "",
       userInfo: {
-        name: "Joe Bloggs",
+        name: "Dan Lee",
         jobTitle: "Associate", //Data.careers.role
-        email: "joe.bloggs@asos.com",
+        email: "daniel.lee@asos.com",
         level: "Associate",
-        lineManager: "Jane Smith",
+        lineManager: "Shantul Sharma",
         career: "QA"
       },
       competencyEvidence: []
