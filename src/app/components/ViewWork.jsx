@@ -6,7 +6,7 @@ export default class ViewWork extends React.Component {
         return (
             <div>
 
-            <img className="image" src="/View.jpeg" />
+            <img className="image" src="/Tech_Hack_Team8_3.jpg" />
 
             </div>
         )
