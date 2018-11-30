@@ -35,12 +35,14 @@ html, body {
   margin: 0 auto;
   display: flex;
   align-items: stretch;
+ 
 }
 
 .user-info {
   width: 260px;
   background-color: #191818;
   padding: 22px;
+  border-bottom: 2px solid #626262;
 }
 
 .user-info h1 {
@@ -99,6 +101,10 @@ html, body {
   margin: 1px;
 }
 
+.links{
+  padding-top: 5px;
+}
+
 .feedback {
   border: 2px solid #FFF;
   background-color: #191818;
@@ -144,15 +150,21 @@ html, body {
 }
 
 .button{
-  font-family: futura-pt, sans-serif;
-  color: white;
-  border-width: 3px;
-  width: 200px;
-  height: 30px;
+  border: 2px solid #FFF;
   background-color: #464646;
-  outline: white;
-  display: inline-block;
-  margin: 0 auto;
+  color: #FFF;
+  border-radius: 0;
+  height: 44px;
+  width: 216px;
+  font-size: 16px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.13;
+  letter-spacing: 0.6px;
+  text-align: center;
+  margin: 40px 0 50px;
+  cursor: pointer;
 }
 
 .button-container{

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import Bar from "./components/Bar";
-import { UserInfo } from "./components/UserInfo";
-import SubCompetencies from "./components/SubCompetencies";
-import data from "./data";
+import Bar from "./Bar";
+import { UserInfo } from "./UserInfo";
+import AddWork from "./AddWork";
+import ViewWork from "./ViewWork";
+import SubCompetencies from "./SubCompetencies";
+import data from "../data";
 
 export default class App extends Component {
   constructor(props) {
@@ -11,9 +13,9 @@ export default class App extends Component {
       selected: "",
       userInfo: {
         name: "Joe Bloggs",
-        jobTitle: "Engineer", //Data.careers.role
+        jobTitle: "QA",
         email: "joe.bloggs@asos.com",
-        level: "Implement",
+        level: "Associate",
         lineManager: "Jane Smith",
         career: "QA"
       }
@@ -32,6 +34,24 @@ export default class App extends Component {
     this.setState({ selected: event.currentTarget.id });
   };
 
+  getPage({ globalCompetencies, competenciesGrades, subCompetencies }) {
+    if (this.props.location.pathname === "/") {
+      return subCompetencies && (
+        <SubCompetencies
+          globalCompetencies={globalCompetencies}
+          competenciesGrades={competenciesGrades}
+          subCompetencies={subCompetencies}
+        />
+      )
+    }
+    if (this.props.location.pathname === "/view") {
+      return <ViewWork />;
+    }
+    if (this.props.location.pathname === "/add") {
+      return <AddWork />;
+    }
+  }
+
   render() {
     const career = this.getCareer();
     const topLevelCompetencies = career.topLevelCompetencies;
@@ -43,7 +63,6 @@ export default class App extends Component {
       : undefined;
     const competenciesGrades = career.grades;
     const globalCompetencies = data.competencies;
-    console.log("competenciesGrades", competenciesGrades);
 
     return (
       <div className="app">
@@ -54,13 +73,7 @@ export default class App extends Component {
             selectTopLevelCompetency={this.selectTopLevelCompetency}
             selectedTopLevelCompetency={selectedTopLevelCompetency}
           />
-          {subCompetencies && (
-            <SubCompetencies
-              globalCompetencies={globalCompetencies}
-              competenciesGrades={competenciesGrades}
-              subCompetencies={subCompetencies}
-            />
-          )}
+          {this.getPage({ globalCompetencies, competenciesGrades, subCompetencies })}
         </div>
       </div>
     );

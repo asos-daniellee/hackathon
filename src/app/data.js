@@ -37,29 +37,93 @@ export default {
         },
         {
           id: "tc-2",
-          name: "Collaboration"
+          name: "Collaboration",
+          subCompentencies: [
+            {
+              id: "sc-7",
+              name: "Collaboration"
+            }
+          ]
         },
         {
           id: "tc-3",
-          name: "Code and Auto Tests"
+          name: "Code and Auto Tests",
+          subCompentencies: [
+            {
+              id: "sc-8",
+              name: "Authoring"
+            },
+            {
+              id: "sc-9",
+              name: "Coverage"
+            },
+            {
+              id: "sc-10",
+              name: "Writing Code"
+            }
+          ]
         },
         {
           id: "tc-4",
           name: "Testing",
           subCompentencies: [
             {
-              id: "sc-7",
+              id: "sc-11",
               name: "Bugs"
+            },
+            {
+              id: "sc-12",
+              name: "Execution - Exploratory"
+            },
+            {
+              id: "sc-13",
+              name: "Execution - Non-Functional"
+            },
+            {
+              id: "sc-14",
+              name: "Execution"
+            },
+            {
+              id: "sc-15",
+              name: "Strategy"
+            },
+            {
+              id: "sc-16",
+              name: "Pairing"
+            },
+            {
+              id: "sc-17",
+              name: "Static Analysis"
+            },
+            {
+              id: "sc-18",
+              name: "Coverage"
+            },
+            {
+              id: "sc-19",
+              name: "Domain Knowledge"
             }
           ]
         },
         {
           id: "tc-5",
-          name: "Shipping and Monitoring"
+          name: "Shipping and Monitoring",
+          subCompentencies: [
+            {
+              id: "sc-20",
+              name: "Shipping and Monitoring"
+            }
+          ]
         },
         {
           id: "tc-6",
-          name: "Talent"
+          name: "Talent",
+          subCompentencies: [
+            {
+              id: "sc-21",
+              name: "Talent"
+            }
+          ]
         }
       ],
       grades: [
