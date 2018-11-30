@@ -28,7 +28,7 @@ export default class AddWork extends React.Component {
     };
 
     getGradeButtons(gradeCompetencies) {
-      return gradeCompetencies.map(({ name }) => <button key={`select-${name}`} data-grade={name} onClick={this.selectGrade}>{name}</button>)
+      return gradeCompetencies.map(({ name }) => <button key={`select-${name}`} data-grade={name} onClick={this.selectGrade} className={this.state.selectedGrade === name ? "grade-button selected" : "grade-button"}>{name}</button>)
     }
 
     handleCheckboxChange = event => {
@@ -42,15 +42,15 @@ export default class AddWork extends React.Component {
     };
 
     getCompetencies(gradeCompetencies) {
-        return <ol>
+        return <ol className="add-work-options">
           {gradeCompetencies
           .filter(({ name }) => name === this.state.selectedGrade)
           .map(({ competencies }) =>
             competencies.map(({ description, cid}) =>
                 <li key={`select-${cid}`}>
-                    <input type="checkbox" name={cid} checked={this.state.checkedValues[cid]}
+                    <input className="add-checkbox" type="checkbox" name={cid} checked={this.state.checkedValues[cid]}
                            onChange={this.handleCheckboxChange}/>
-                  {description}
+                  <span>{description}</span>
                 </li>
             ))}
         </ol>;
@@ -74,10 +74,12 @@ export default class AddWork extends React.Component {
         return (
           <div className="subCompetencies-main">
               <h1 className="subCompetencies-title">{this.props.selectedSubLevelCompetency.name}</h1>
+            <div className="add-work">
               <h2>WHICH SKILLS DO YOU WANT TO PROVE?</h2>
               { this.getGradeButtons(gradeCompetencies) }
               { this.getCompetencies(gradeCompetencies) }
-              <Link to="/"><button type="submit" onClick={this.updateCompetencies}>Submit</button></Link>
+              <Link className="center" to="/"><button type="submit" className="button-add" onClick={this.updateCompetencies}>Submit</button></Link>
+            </div>
           </div>
         )
     }

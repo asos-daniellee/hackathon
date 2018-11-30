@@ -39,6 +39,7 @@ body {
 }
 
 .user-info {
+  box-sizing: border-box;
   width: 260px;
   background-color: #191818;
   padding: 22px;
@@ -334,4 +335,62 @@ body {
   margin: 0 auto;
   display: block;
   width: 1440px;
+}
+.add-work {
+  padding: 18px;
+}
+
+.add-work h2 {
+  height: 20px;
+  font-size: 14px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: 0.8px;
+  margin-bottom: 20px;
+}
+
+.add-work .grade-button {
+  color: #FFF;
+  border: none;
+  width: 158px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: #000000;
+  margin-right: 16px;
+  cursor: pointer;
+  margin-bottom: 35px;
+}
+
+.add-work .grade-button.selected {
+  background-color: #ff00eb;
+}
+
+.add-work .button-add {
+  margin: 20px auto 0;
+}
+
+.add-checkbox {
+  -webkit-appearance: none;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #ff00eb;
+  background-color: #000;
+  color: #FFF;
+  vertical-align: middle;
+  margin: 0 20px;
+}
+
+.add-checkbox:checked {
+  background-color: #ff00eb;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.add-work-options li {
+  margin-top: 10px;
 }
