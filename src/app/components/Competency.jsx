@@ -43,7 +43,7 @@ export default class Competency extends React.Component {
         {this.getGradesAndCompetencies()}
         
         
-        <div className="button-container">
+        <div>
         <Link to="/add">
           <button className="button-add">Add Your Work</button>
         </Link>
